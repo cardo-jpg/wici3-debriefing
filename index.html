@@ -178,6 +178,16 @@
   .foot{padding:56px 0 44px;}
   .sig{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft);letter-spacing:.04em;} .sig b{color:var(--plum);}
   .disclaim{font-size:.74rem;color:var(--ink-soft);margin-top:12px;max-width:70ch;line-height:1.55;}
+  @media print{
+    html{font-size:98%;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    @page{size:A4;margin:11mm;}
+    .nav{display:none!important;}
+    .hero{padding-top:10px!important;}
+    section{padding:22px 0!important;}
+    .call,.err,.rec,.pat,.row,.stat,.fstep,.letter,.board,figure,img,table,tr{break-inside:avoid;}
+    h2,h3{break-after:avoid;}
+  }
 </style>
 </head>
 <body>
